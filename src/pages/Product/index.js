@@ -5,6 +5,9 @@ import './product-info.css';
 import { useParams, useHistory } from "react-router-dom";
 import api from "../../services/api";
 
+import {toast} from 'react-toastify';
+
+
 export default function Product(){
     const { id  } = useParams();
     const history = useHistory();
@@ -47,13 +50,15 @@ export default function Product(){
         const hasProduto = produtosSalvos.some((produtoSalvo) => produtoSalvo.id === produto.id)
 
         if(hasProduto){
-            alert('Você já salvou esse produto');
+            toast.info('Você já salvou esse produto');
+            //alert('Você já salvou esse produto');
             return;
         }
 
         produtosSalvos.push(produto);
         localStorage.setItem('produtos', JSON.stringify(produtosSalvos));
-        alert('Produto salvo com sucesso!')
+        //alert('Produto salvo com sucesso!')
+        toast.success('Produto salvo com sucesso!');
 
     }
 

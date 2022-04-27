@@ -3,6 +3,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './favoritos.css';
+import {toast} from 'react-toastify';
 
 export default function Favoritos(){
     const [produtos, setProdutos] = useState([]);
@@ -21,11 +22,14 @@ export default function Favoritos(){
 
        setProdutos(filtrosProdutos);
        localStorage.setItem('produtos', JSON.stringify(filtrosProdutos))
+       toast.success('Produto excluido com sucesso!');
     }
     
     return(
         <div id="meus-produtos">
-            <h1>Página Produtos Favoritos</h1>
+            <h1>Produtos Favoritos</h1>
+
+            {produtos.length === 0 && <span>Você não tem produto salvo</span>}
 
             <ul>
                 {produtos.map((item)=>{
