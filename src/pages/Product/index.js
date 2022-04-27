@@ -36,6 +36,27 @@ export default function Product(){
 
     }, [history, id]);
 
+    function salvaProduto(){
+        
+        const minhaLista = localStorage.getItem('produtos');
+
+        let produtosSalvos = JSON.parse(minhaLista) || []; 
+
+
+        //se tiver o mesmo prod. ignora
+        const hasProduto = produtosSalvos.some((produtoSalvo) => produtoSalvo.id === produto.id)
+
+        if(hasProduto){
+            alert('Você já salvou esse produto');
+            return;
+        }
+
+        produtosSalvos.push(produto);
+        localStorage.setItem('produtos', JSON.stringify(produtosSalvos));
+        alert('Produto salvo com sucesso!')
+
+    }
+
     if(loading){
         return(
             <div className="produto-info">
@@ -54,7 +75,7 @@ export default function Product(){
         {produto.price}
 
         <div className="botao">
-            <button onClick={()=>{}}>Salvar</button>
+            <button onClick={( salvaProduto )}>Salvar</button>
         </div>
 
     </div>

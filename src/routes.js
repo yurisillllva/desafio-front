@@ -8,6 +8,7 @@ import Header from './components/Header';
 
 import Home from './pages/Home';
 import Product from './pages/Product';
+import Favoritos from './pages/Favoritos';
 
 
 
@@ -18,6 +19,7 @@ const Routes = () => {
           <Switch>  
             <Route exact path="/" component={Home} />
             <Route exact path="/products/:id" component={Product} />
+            <Route exact path="/favoritos" component={Favoritos} />
             </Switch> 
         </BrowserRouter>
     )
