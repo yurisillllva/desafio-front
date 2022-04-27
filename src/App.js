@@ -1,17 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 
+import './styles.css';
+import Routes from './routes';
 
+//http://localhost:3000/products
 
-class App extends Component{
-  render(){
+export default function App() {
     return (
-      <div className= " app" >
-          <h1>Bora</h1> 
+      <div className="app">
+          <Routes/>
       </div>
     );
 
   }
-}
 
-
-export default App;
