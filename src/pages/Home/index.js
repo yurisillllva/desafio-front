@@ -30,7 +30,7 @@ export default function Home() {
                 <strong>{produto.title}</strong>
                 <strong>{produto.category}</strong>
                 <img src={produto.image} alt={produto.title} />
-                <Link to="/">Mais Detalhes</Link>
+                <Link to={`/products/${produto.id}`}>Mais Detalhes</Link>
               </article>
             )
           })}
