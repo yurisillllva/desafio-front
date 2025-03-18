@@ -1,27 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# E-commerce de Roupas - SPA
 
-## Available Scripts
+Este projeto é um e-commerce de roupas desenvolvido como uma SPA (Single Page Application) utilizando ReactJS. A aplicação consome uma API fake com inúmeros produtos de roupas e oferece funcionalidades como visualizar produtos, salvar pedidos futuros e favoritar produtos.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `yarn start`
+- **Visualizar Produtos**: A aplicação exibe uma lista de produtos de roupas consumidos de uma API fake.
+- **Detalhes do Produto**: Os usuários podem visualizar os detalhes de cada produto acessando suas páginas específicas.
+- **Favoritar Produtos**: Os usuários podem adicionar produtos aos seus favoritos para referência futura.
+- **Salvar Pedidos Futuros**: Os usuários podem salvar seus pedidos para futuras compras.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologias Utilizadas
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **ReactJS**: Biblioteca JavaScript para construção da interface de usuário.
+- **React Router**: Utilizado para navegação entre páginas, permitindo uma experiência de navegação fluida e sem recarregamento de página.
+- **Axios**: Biblioteca para realizar requisições HTTP para consumir dados da API fake.
+- **React Toastify**: Biblioteca para exibir notificações (toasts) informando os usuários sobre ações como adicionar produtos aos favoritos ou realizar pedidos.
+- **JSON Server**: Simula um backend para fornecer os dados de produtos e favoritos.
+- **React Scripts**: Utilizado para gerenciar e rodar o aplicativo React durante o desenvolvimento.
+- **Yarn**: Gerenciador de pacotes para instalar dependências do projeto.
 
-### `yarn test`
+## Pré-requisitos
 
-Essa aplicação está simulando uma api com Json server. Contida todas as informações dos produtos em db.json.
+Antes de rodar o projeto, verifique se você tem as seguintes dependências instaladas:
 
-Para a execução do serviço da api executa-se em um terminal o comando:
-
-### `json-server --watch db.json` 
-
-E logo em seguida em outro terminal o comando:
-
-### `yarn start`
-
-Esta aplicação foi desenvolvida com a finalidade de realizar o desafio proposto pela empresa Paggue, em que deveria criar um "quase" ecommerce e consequentemente poder concorrer a vaga de front-end na empresa.
+- [Node.js](https://nodejs.org/) (versão 12 ou superior)
+- [Yarn](https://yarnpkg.com/) (gerenciador de pacotes JavaScript)
